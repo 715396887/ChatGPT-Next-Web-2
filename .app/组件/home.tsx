@@ -158,15 +158,6 @@ function _Home() {
             </div>
           </div>
           <div>
-            <IconButton
-              icon={<AddIcon />}
-              text={Locale.Home.NewChat}
-              onClick={() => {
-                createNewSession();
-                setShowSideBar(false);
-              }}
-              shadow
-            />
           </div>
         </div>
       </div>
