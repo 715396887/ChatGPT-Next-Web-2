@@ -121,7 +121,7 @@ function _Home() {
         <div className={styles["sidebar-header"]}>
           <div className={styles["sidebar-title"]}>奥特曼</div>
           <div className={styles["sidebar-sub-title"]}>
-            用AI改变生活.
+            AI改变生活.
           </div>
           <div className={styles["sidebar-logo"]}>
             <ChatGptIcon />
@@ -156,8 +156,22 @@ function _Home() {
                 shadow
               />
             </div>
+            <div className={styles["sidebar-action"]}>
+              <a href={REPO_URL} target="_blank">
+                <IconButton icon={<GithubIcon />} shadow />
+              </a>
+            </div>
           </div>
           <div>
+            <IconButton
+              icon={<AddIcon />}
+              text={Locale.Home.NewChat}
+              onClick={() => {
+                createNewSession();
+                setShowSideBar(false);
+              }}
+              shadow
+            />
           </div>
         </div>
       </div>
